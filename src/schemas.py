@@ -60,13 +60,20 @@ class CategoryDetail(CategoryForm):
         title='Category URL',
         description='Unique Category URL'
     )
-    products: Optional[List[ProductDetail]]
 
     @root_validator(pre=True)
     def validator(cls, values: dict) -> dict:
         if not values.get('slug'):
             values['slug'] = slugify(values.get('name'))
         return values
+
+    class Config:
+        orm_mode = True
+
+
+class CategoryDetailFull(CategoryDetail):
+
+    products: Optional[List[ProductDetail]]
 
     class Config:
         json_dumps = ujson.dumps
@@ -84,6 +91,7 @@ class CategoryDetail(CategoryForm):
 
 class Settings(BaseSettings):
     DATABASE_URL: PostgresDsn
+    PAGINATE_BY: PositiveInt = Field(default=5)
 
     class Config:
         env_file = '.env'

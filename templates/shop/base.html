@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', path='/shop/fonts/icomoon/style.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', path='/shop/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='/shop/css/magnific-popup.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='/shop/css/jquery-ui.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='/shop/css/owl.carousel.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='/shop/css/owl.theme.default.min.css') }}">
+
+
+  <link rel="stylesheet" href="{{ url_for('static', path='/shop/css/aos.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', path='/shop/css/style.css') }}">
+
+</head>
+
+<body>
+  {% block content %}{% endblock %}
+  <script src="{{ url_for('static', path='/shop/js/jquery-3.3.1.min.js') }}"></script>
+  <script src="{{ url_for('static', path='/shop/js/jquery-ui.js') }}"></script>
+  <script src="{{ url_for('static', path='/shop/js/popper.min.js') }}"></script>
+  <script src="{{ url_for('static', path='/shop/js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', path='/shop/js/owl.carousel.min.js') }}"></script>
+  <script src="{{ url_for('static', path='/shop/js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ url_for('static', path='/shop/js/aos.js') }}"></script>
+
+  <script src="{{ url_for('static', path='/shop/js/main.js') }}"></script>
+
+</body>
+
+</html>
